@@ -1,0 +1,59 @@
+body{
+	padding-top:50px;
+	background:url('http://previews.123rf.com/images/100ker/100ker1202/100ker120200001/12375412-vector-hop-with-leaf-seamless-background-Stock-Vector-vine-pattern-hop.jpg');
+}
+.jumbotron{
+	background:rgba(255,255,255,0.8);
+}
+.main-body{
+padding:10px;
+text-align: center;
+}
+img{
+display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wed-party-container{
+background: rgba(255,255,255,0.9);
+padding-bottom:100px;
+padding-top:40px;
+}
+.wedding-party-img {
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	float:left;
+	position:relative;
+	border-style: solid;
+	border-width: 1px;
+    padding: 5px;
+	display:inline-block;
+	cursor:pointer;
+}
+.wedding-party-img img{
+
+	 position: absolute;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  left: 0px;
+}
+.wedding-party-img:hover {
+	border-color:blue;
+	border-width:2px
+}
+.wedding-party-img.active{
+	width:300px;
+	height:300px;
+	cursor:initial;
+}
+.wedding-party-img.active:hover{
+	border-width:1px;
+}
+#manActive{
+	padding:0px;
+}
+#maidActive{
+	padding:0px;
+}
