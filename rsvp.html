@@ -13,6 +13,7 @@
 		<!-- Latest compiled and minified JavaScript -->
 		
 		<script src = "/quickforms/js/require.min.js" ></script>
+		<script src="../js/json2.js"></script>
 		
 		<link rel="stylesheet" href="/quickforms/css/quickforms/quickforms.css" />
 		
@@ -25,12 +26,13 @@
 				{
 					require(['dom/navControl',
 							'dom/form/text','dom/form/checkbox',
-							'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',
-							'js/wedParty.js'],
+							'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'],
 						function(){
-							setCookie('userRole','Administrator',1);
-							//quickforms.loadNav('header.html','navPlaceholder');
+							//Wake up the server
+							quickforms.getFactData({queryName:'getFactMetadata',callback:function(){}});
+							
 							quickforms.parseForm({fact:'rsvp',formId:'rsvpForm'});
+							
 							$('#plusOne').click(function(){
 								$(this).is(':checked')?$('.plusOneOnly').removeClass('hidden'):$('.plusOneOnly').addClass('hidden');
 							});
@@ -134,6 +136,12 @@
 					<div class="radio-inline">
 						<label for="plusveg"><input id="plusveg" name="plusOneMeal" type="radio" value="3" />Vegetarian</label>
 					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class="form-group">
+					<label for="song">Suggest a Song (optional)</label>
+					<input id="song" name="song" type="text" class="form-control" />
 				</div>
 				<br/>
 				<br/>
